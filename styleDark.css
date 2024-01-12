@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&family=Roboto+Slab&display=swap');
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #3e3e3e, #000000);
+    box-sizing: border-box;
+    color: #FFFFFF; 
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header, .footer {
+    font-family: 'Roboto Slab', sans-serif;
+    width: 100%;
+    padding: 20px;
+    color: #FFFFFF; 
+}
+
+.header {
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    text-align: center;
+    font-size: 3.5em;
+    color: #FFFFFF; 
+}
+
+.calculator-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-left: 10px;
+    color: #FFFFFF; 
+}
+
+.main {
+    font-family: 'Noto Sans Mono', monospace;
+    height: 100%;
+}
+
+.wrapper {
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px;
+    border: 2px solid black;
+    border-radius: 12px;
+    background-color: #595959; 
+}
+
+.display {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    border: 2px solid black;
+    border-radius: 6px;
+    height: 100%;
+    width: 100%;
+    padding: 8px;
+    background-color: #576c52; 
+}
+
+#input {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    font-size: 20px;
+}
+
+#cursor {
+    font-size: 20px;
+    margin-bottom: 4px;
+    margin-left: -4px;
+    overflow: hidden;
+}
+
+#cursor.off {
+    visibility: hidden;
+}
+
+#result {
+    font-size: 30px;
+}
+
+.row {
+    display: flex;
+    gap: 15px;
+}
+
+.wrapper button {
+    width: 70px;
+    height: 50px;
+    border-radius: 6px;
+    background-color: #767676; 
+    color: #FFFFFF; 
+    border: 2px solid black;
+    font-size: 25px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 8px;
+}
+
+.wrapper button:hover {
+    cursor: pointer;
+}
+
+.wrapper button:active {
+    cursor: pointer;
+    -webkit-box-shadow: inset 0px 0px 5px #aaaaaa;
+    -moz-box-shadow: inset 0px 0px 5px #aaaaaa;
+    box-shadow: inset 0px 0px 5px #aaaaaa;
+    outline: none;
+    transform: scale(0.97);
+}
+
+#all-clear-btn {
+    color: #FFFFFF;  
+    background-color: rgba(255, 30, 80, 0.8);
+}
+
+#delete-btn {
+    color: #FFFFFF; 
+    background-color: rgba(255, 110, 40, 0.8);
+}
+
+#divide-btn, #multiply-btn, #subtract-btn, #addition-btn, #equal-btn {
+    font-size: 30px;
+    color: #FFFFFF; 
+}
+
+#factorial-btn {
+    font-size: 25px;
+    color: #FFFFFF; 
+}
+
+#equals-btn {
+    background-color: rgba(40, 255, 120, 0.8);
+    color: #FFFFFF; 
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #FFFFFF; 
+}
+
+/* Media Query remains unchanged */
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #8c7117;
+    transition: .4s;
+    border-radius: 34px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+  .theme-label {
+    margin-left: 10px;
+    line-height: 34px;
+    color: #ffffff;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    height: 50px;
+  }
+  
+  .theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
